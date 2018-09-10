@@ -61,6 +61,7 @@ For this we'll take a short journey backward into Node, Express, and EJS!
 * Fork and clone this repo - we'll be turning this in!
 * First things first - read through the code you're already being given!
     * Route stubs are already in `index.js`, `museums.js`, and `pieces.js`. Some inline hints are provided for you.
+    * All your routes and EJS files exist already - your job is just to make it all functional with real data!
 * Next make your models. Refer to in-class examples, and modify them to fit your needs. See below section for model requirements.
 * Create forms that post data to your server for each collection
 * Implement adding a museum or a piece to your database
@@ -69,6 +70,8 @@ For this we'll take a short journey backward into Node, Express, and EJS!
 ## Model Requirements
 
 There are stubs for your model index file, and the museum and piece models. Hints are written inline that lay out the steps you need to do yourself.
+
+Don't be daunted! Mongoose is a lot like Sequelize, so using it will feel a little bit familiar even though it's new to you! When you need to know what to do, look up the [Mongoose docs](https://mongoosejs.com/docs/guide.html) and try to find something that looks like an equivalent. You can also refer to the [class notes](https://gawdiseattle.gitbooks.io/wdi/05-express/express-mongoose/readme.html) for all the CRUD examples.
 
 #### Museum
 
@@ -97,7 +100,7 @@ A creator should have a first name, a last name, an image, a birth year, and a d
 
 ## Routes
 
-The below routes are stubbed out for your convenience. You don't need to add any new ones, just implement the ones that are already there. Express EJS Layouts as well as a layout.ejs and a navbar are already included for you.
+The below routes are stubbed out for your convenience. You don't need to add any new ones, just implement the ones that are already there. Express EJS Layouts as well as a layout.ejs and a navbar are already included for you. All the individual EJS files are stubbed out for you too. This way you can get straight to the part where you are creating the models and using them in your routes.
 
 | Method | Route Path | Purpose |
 | ----- | ------------- | ------------------------------- |
@@ -134,6 +137,7 @@ Once your forms for adding museums and pieces works:
 
 ## References
 
+* [Mongoose docs](https://mongoosejs.com/docs/guide.html)
 * [Populate](https://mongoosejs.com/docs/populate.html)
 * [Mongoose Connections](https://mongoosejs.com/docs/connections.html)
 * [Using Sub-documents](https://mongoosejs.com/docs/subdocs.html)
