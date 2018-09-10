@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   // TODO: Replace stub route with page that renders list of all pieces
-  res.send('STUB - PIECES INDEX');
+  res.render('pieces/index');
 });
 
 router.post('/', (req, res) => {
@@ -16,13 +16,13 @@ router.post('/', (req, res) => {
 
 router.get('/new', (req, res) => {
   // TODO: Replace stub route with page that renders form for adding new piece
-  res.send('STUB - NEW PIECES FORM');
+  res.render('pieces/new');
 });
 
 router.get('/:id', (req, res) => {
   // TODO: Replace stub route with page that renders piece details
   //  and all the info about it's creator and the museum it's located in
-  res.send('STUB - PIECES SHOW PAGE (specific museum)');
+  res.send('pieces/show');
 });
 
 module.exports = router;
