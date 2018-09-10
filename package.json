@@ -1,0 +1,20 @@
+{
+  "name": "mongoose-practice",
+  "version": "1.0.0",
+  "description": "WDI student practice for mongo models and 1:M",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WDI-SEA/mongoose-practice.git"
+  },
+  "keywords": [],
+  "author": "Yours truly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WDI-SEA/mongoose-practice/issues"
+  },
+  "homepage": "https://github.com/WDI-SEA/mongoose-practice#readme"
+}
