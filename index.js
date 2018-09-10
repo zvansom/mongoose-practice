@@ -1,4 +1,5 @@
 // TODO: Require needed node modules
+const bodyParser = require('body-parser');
 const express = require('express');
 const expressEjsLayouts = require('express-ejs-layouts');
 
@@ -8,10 +9,9 @@ const app = express();
 // Set the view engine
 app.set('view engine', 'ejs');
 
-// TODO: Connect to Mongo database
-
 // TODO: Middleware, etc
 app.use(expressEjsLayouts);
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Declare controllers
 app.use('/museums', require('./controllers/museums'));

@@ -1,6 +1,8 @@
 // Require mongoose node module
 const mongoose = require('mongoose');
 
+// TODO: Connect to Mongo database
+
 // TODO: Require your other models, and export them
 
 // NOTE: Your files can have multiple module.exports statements!
