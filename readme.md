@@ -87,38 +87,50 @@ const mongoose = require('mongoose');
 
 #### Piece
 
-A piece should have a name, an image, an embedded schema for Creator, and a reference to the Museum it is currently in. TODOs and HINTs are also found in this stub file, so take a look at it.
+A piece should have a name, an image, an embedded schema for Creator, and a reference to the Museum it is currently in. `TODOs` and `HINTs` are also found in this stub file, so take a look at it.
 
 #### Creator
 
 A creator should have a first name, a last name, an image, a birth year, and a death year. 
 
+> Note: This doesn't need any separate file - it just gets to live inside the Piece model! 
+
 ## Routes
 
-The below routes are stubbed out for your convenience. You don't need to add any new ones, just implement the ones that are already there.
+The below routes are stubbed out for your convenience. You don't need to add any new ones, just implement the ones that are already there. Express EJS Layouts as well as a layout.ejs and a navbar are already included for you.
 
 | Method | Route Path | Purpose |
-| ----- | ------------- | --------------------------- |
-| GET | / | Home page |
+| ----- | ------------- | ------------------------------- |
+| GET | / | Home page - already has an EJS file |
 | GET | /museums | Index page to show a list of museums |
 | POST | /museums | Take form data and use it to add new museum |
 | GET | /museums/new | Render form for adding new museum |
 | GET | /museums/:id | Show page for specific museum. Include list of pieces! |
 | GET | /pieces | Index page to show a list of pieces |
-| POST | /pieces | Take form data and use it to add a new piece |
+| POST | /pieces | Use form data to add a new piece (remember to add museum and creator!) |
 | GET | /pieces/new | Render form for adding a new piece |
-| GET | /pieces/:id | Show page for specific piece. Include creator info! |
+| GET | /pieces/:id | Show page for specific piece. Include all creator info! |
 
+> HINT: Use a dropdown on the new piece form so that the user can select which Museum the piece belongs in! :) 
 
 ## Hooking it up
 
 For embedded documents, you are readily able to get the information since it already exists in your document. For referenced documents, use the [populate](https://mongoosejs.com/docs/populate.html) functionality. This is the correlate to Sequelize's `include`. It does the work of a join or sub query and loads up the data onto your object(s) as needed.
+
+## Bring it all together now!
+
+Once your forms for adding museums and pieces works:
+
+* Add at least 2 museums. 
+* Add at least two pieces of art to each museums
 
 ## Need More? Try a Bonus
 
 * Implement a DELETE route for a piece or a museum
 * Implement a PUT route for editing a piece or a museum
 * Style it up! Add some custom CSS!
+* Look up some artwork! 
+    * Do you know where the Mona Lisa lives? How about the Rosetta stone? What about the statue of David? Monet's Water Lillies? Fill out your database with some impressive pieces!
 
 ## References
 
