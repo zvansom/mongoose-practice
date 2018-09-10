@@ -68,13 +68,26 @@ For this we'll take a short journey backward into Node, Express, and EJS!
 
 ## Model Requirements
 
+There are stubs for your model index file, and the museum and piece models. Hints are written inline that lay out the steps you need to do yourself.
+
 #### Museum
 
-A museum should have a name, a city, a country, and an image.
+A museum should have a name, a city, a country, and an image. The stub file looks like the code snippet below, so go ahead and try to implement the things that are marked as `TODOs`.
+
+```javascript
+// Require Mongoose node module
+const mongoose = require('mongoose');
+
+// TODO: Create Museum Schema
+
+// TODO: Use schema to create model
+
+// TODO: Export Museum Model
+```
 
 #### Piece
 
-A piece should have a name, an image, an embedded schema for Creator, and a reference to the Museum it is currently in
+A piece should have a name, an image, an embedded schema for Creator, and a reference to the Museum it is currently in. TODOs and HINTs are also found in this stub file, so take a look at it.
 
 #### Creator
 
