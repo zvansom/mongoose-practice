@@ -16,7 +16,7 @@ When using MongoDB, you can have some properties in one document and a different
 
 In MongoDB, you store data in a format called BSON. BSON looks a lot like JSON, and in fact, they are related. BSON is a superset of JSON, which means it does everything JSON does, and a little bit more, such as defining ObjectIds. A typical document (row) in a User collection (table) would look something like this:
 
-```json
+```
 {
     "_id" : ObjectId("5a62b3d038556634d8280ec4"),
     "name" : "Brandi",
@@ -78,7 +78,7 @@ A piece should have a name, an image, an embedded schema for Creator, and a refe
 
 #### Creator
 
-A creator should have a first name, a last name, a birth year, and a death year. 
+A creator should have a first name, a last name, an image, a birth year, and a death year. 
 
 ## Routes
 
@@ -97,7 +97,20 @@ The below routes are stubbed out for your convenience. You don't need to add any
 | GET | /pieces/:id | Show page for specific piece. Include creator info! |
 
 
-
 ## Hooking it up
 
 For embedded documents, you are readily able to get the information since it already exists in your document. For referenced documents, use the [populate](https://mongoosejs.com/docs/populate.html) functionality. This is the correlate to Sequelize's `include`. It does the work of a join or sub query and loads up the data onto your object(s) as needed.
+
+## Need More? Try a Bonus
+
+* Implement a DELETE route for a piece or a museum
+* Implement a PUT route for editing a piece or a museum
+* Style it up! Add some custom CSS!
+
+## References
+
+* [Populate](https://mongoosejs.com/docs/populate.html)
+* [Mongoose Connections](https://mongoosejs.com/docs/connections.html)
+* [Using Sub-documents](https://mongoosejs.com/docs/subdocs.html)
+* [Finding a subdocument by ID](https://mongoosejs.com/docs/subdocs.html) (down page!)
+* [Class notes](https://gawdiseattle.gitbooks.io/wdi/05-express/express-mongoose/readme.html)
