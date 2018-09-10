@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/WDI-SEA/mongoose-practice/issues"
   },
-  "homepage": "https://github.com/WDI-SEA/mongoose-practice#readme"
+  "homepage": "https://github.com/WDI-SEA/mongoose-practice#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
