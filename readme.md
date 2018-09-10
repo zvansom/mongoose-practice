@@ -59,8 +59,45 @@ Today we'll make an app that relates museums to pieces of art. We'll make schema
 For this we'll take a short journey backward into Node, Express, and EJS!
 
 * Fork and clone this repo - we'll be turning this in!
-* Start with stubbing out `index.js`. Some inline hints are provided for you.
-* Next make your models. Refer to in-class examples, and modify them to fit your needs.
+* First things first - read through the code you're already being given!
+    * Route stubs are already in `index.js`, `museums.js`, and `pieces.js`. Some inline hints are provided for you.
+* Next make your models. Refer to in-class examples, and modify them to fit your needs. See below section for model requirements.
 * Create forms that post data to your server for each collection
-* Create show pages that allow you to view both the item and it's related data from the other collection
+* Implement adding a museum or a piece to your database
+* Create show pages for both museum and piece that allow you to view both the item and it's related data from the other collection
 
+## Model Requirements
+
+#### Museum
+
+A museum should have a name, a city, a country, and an image.
+
+#### Piece
+
+A piece should have a name, an image, an embedded schema for Creator, and a reference to the Museum it is currently in
+
+#### Creator
+
+A creator should have a first name, a last name, a birth year, and a death year. 
+
+## Routes
+
+The below routes are stubbed out for your convenience. You don't need to add any new ones, just implement the ones that are already there.
+
+| Method | Route Path | Purpose |
+| ----- | ------------- | --------------------------- |
+| GET | / | Home page |
+| GET | /museums | Index page to show a list of museums |
+| POST | /museums | Take form data and use it to add new museum |
+| GET | /museums/new | Render form for adding new museum |
+| GET | /museums/:id | Show page for specific museum. Include list of pieces! |
+| GET | /pieces | Index page to show a list of pieces |
+| POST | /pieces | Take form data and use it to add a new piece |
+| GET | /pieces/new | Render form for adding a new piece |
+| GET | /pieces/:id | Show page for specific piece. Include creator info! |
+
+
+
+## Hooking it up
+
+For embedded documents, you are readily able to get the information since it already exists in your document. For referenced documents, use the [populate](https://mongoosejs.com/docs/populate.html) functionality. This is the correlate to Sequelize's `include`. It does the work of a join or sub query and loads up the data onto your object(s) as needed.
