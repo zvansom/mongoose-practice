@@ -3,19 +3,37 @@ const express = require('express');
 
 // Declare router
 const router = express.Router();
+const db = require('../models');
 
 router.get('/', (req, res) => {
   // TODO: Replace stub route with page that renders list of all museums
-  res.render('museums/index');
+  // db.Museum.find().then( result => {
+  //   res.render('museums/index', { result });
+  // }).catch(err => {
+  //   console.log(err);
+  //   res.send(err);
+  // })
+  
 });
 
 router.post('/', (req, res) => {
-  // TODO: Replace stub route with page that renders form for adding new museum
-  res.send('STUB - NEW MUSEUM POST');
+  // Replace stub route with page that redirects after adding new museum
+  const { name, city, country, image } = req.body;
+  db.Museum.create({
+    name: name,
+    city: city,
+    country: country,
+    image: image,
+  }).then(result => {
+    res.redirect('/museums');
+  }).catch(err => {
+    console.log(err);
+    res.send(err);
+  })
 });
 
 router.get('/new', (req, res) => {
-  // TODO: Replace stub route with page that renders form for adding new museum
+  // Replace stub route with page that renders form for adding new museum
   res.render('museums/new');
 });
 
